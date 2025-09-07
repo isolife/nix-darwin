@@ -16,6 +16,7 @@ in
     environment.systemPackages = shared-packages ++ [
       # Utility
       pkgs.betterdisplay
+      pkgs.rectangle
     ];
   };
 }
