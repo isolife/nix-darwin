@@ -77,7 +77,7 @@
         magnification = true; #enable magnification
         persistent-apps = [
           {
-            app = "/Applications/Safari.app";
+            app = "/system/Applications/Safari.app";
           }
           {
             app = "/System/Applications/Messages.app";
