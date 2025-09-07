@@ -89,7 +89,7 @@
             app = "${pkgs.alacritty}/Applications/Alacritty.app";
           }
           {
-            app = "${pkgs.spotify}/Applications/Spotify.app";
+            app = "/Applications/Spotify.app";
           }
           {
             app = "/System/Applications/Photos.app";

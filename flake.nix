@@ -24,6 +24,7 @@
       system.configurationRevision = self.rev or self.dirtyRev or null;
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
+      #homebrew.enable = true;
 
       # Imports for MacOS configuration
       imports = [
@@ -39,7 +40,39 @@
     # $ darwin-rebuild build --flake .#MacOS
     # $ sudo darwin-rebuild switch --flake .#MacOS
     darwinConfigurations."MacOS" = darwin.lib.darwinSystem {
-      modules = [ macos ];
+      modules = [
+        # macOS configuration module
+        macos
+        # Homebrew setup
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            enable = true;
+
+            # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+            enableRosetta = true;
+
+            # User owning the Homebrew prefix
+            user = "iso";
+
+            # Optional: Declarative tap management
+            taps = {
+              "homebrew/homebrew-core" = homebrew-core;
+              "homebrew/homebrew-cask" = homebrew-cask;
+            };
+
+            # Optional: Enable fully-declarative tap management
+            mutableTaps = false;
+          };
+        }
+        # Optional: Align homebrew taps config with nix-homebrew
+        ({config, ...}: {
+          homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
+        })
+        # Imports for MacOS configuration
+        ./shared
+        ./darwin
+      ];
     };
   };
 
