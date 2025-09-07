@@ -3,5 +3,5 @@
 with pkgs; [
   obsidian
   fastfetchMinimal
-  Alacritty
+  alacritty
 ]
