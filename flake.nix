@@ -53,7 +53,7 @@
             enableRosetta = true;
 
             # User owning the Homebrew prefix
-            user = "iso";
+            user = systemSettings.username;
 
             # Optional: Declarative tap management
             taps = {
