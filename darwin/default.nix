@@ -62,7 +62,7 @@
         InitialKeyRepeat = 15; # delay until key repeat
         "com.apple.mouse.tapBehavior" = 1; # enable tap to click
         "com.apple.sound.beep.volume" = 0.0; # disable beep sound
-        NSAutomaticSpellingCorrectionEnabled = true;  # disable auto spelling correction
+        NSAutomaticSpellingCorrectionEnabled = true;  # enable auto spelling correction
       };
 
       dock = {
@@ -168,6 +168,11 @@
           WebAutomaticSpellingCorrectionEnabled = false; # disable auto spelling correction
           InstallExtensionUpdatesAutomatically = true; # auto update extensions
           SendDoNotTrackHTTPHeader = true; # enable Do Not Track
+        };
+
+        "com.apple.LaunchServices" = {
+          # Disable the "Are you sure you want to open this application?" dialog
+          LSQuarantine = false;
         };
       };
     };
