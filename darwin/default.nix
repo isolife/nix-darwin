@@ -156,6 +156,12 @@
         "com.apple.ImageCapture" = {
           disableHotPlug = true;
         };
+        "com.apple.Safari" = {
+          AutoFillPasswords = false;
+          AutoFillCreditCardData = false;
+          AutoFillFromAddressBook = false;
+          AutoFillMiscellaneousForms = false;
+        };
       };
     };
   };
