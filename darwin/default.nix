@@ -158,7 +158,7 @@
         };
 
         "com.apple.Safari" = {
-          AutofillPasswords = false; # disable Safari's AutoFill feature
+          AutoFillPasswords = false; # disable Safari's AutoFill feature
         };
       };
     };
