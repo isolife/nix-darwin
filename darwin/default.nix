@@ -159,6 +159,15 @@
 
         "com.apple.Safari" = {
           AutoFillPasswords = false; # disable Safari's AutoFill feature
+          AutoFillFromAddressBook = false; # disable Safari's AutoFill feature
+          AutoFillCreditCardData = false; # disable Safari's AutoFill feature
+          AutoFillMiscellaneousForms = false; # disable Safari's AutoFill feature
+          ShowFullURLInSmartSearchField = true; # show full URL in address bar
+          AutoOpenSafeDownloads = false; # disable auto opening of safe downloads
+          ShowFavoritesBar = false; # hide favorites bar
+          WebAutomaticSpellingCorrectionEnabled = false; # disable auto spelling correction
+          InstallExtensionUpdatesAutomatically = true; # auto update extensions
+          SendDoNotTrackHTTPHeader = true; # enable Do Not Track
         };
       };
     };
