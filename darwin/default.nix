@@ -9,7 +9,7 @@
 
   imports = [
     ./pkgs.nix
-  ];
+  ];  
 
   homebrew = {
     enable = true;
@@ -41,7 +41,6 @@
   
   # Add ability to used TouchID for sudo authentication
   security.pam.services.sudo_local.touchIdAuth = true;
-  targets.darwin.defaults."com.apple.Safari".AutoFillPasswords = false;
 
   system = {
     primaryUser = systemSettings.username;
@@ -156,6 +155,10 @@
         # Disable auto opening of Image Capture
         "com.apple.ImageCapture" = {
           disableHotPlug = true;
+        };
+
+        "com.apple.Safari" = {
+          AutofillPasswords = false; # disable Safari's AutoFill feature
         };
       };
     };
