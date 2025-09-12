@@ -6,4 +6,6 @@ _:
   "github"
   "spotify"
   "visual-studio-code"
+  "logi-options+"
+  "mos"
 ]
