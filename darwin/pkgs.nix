@@ -17,6 +17,7 @@ in
       # Utility
       pkgs.betterdisplay
       pkgs.rectangle
+      pkgs.oh-my-posh
     ];
   };
 }

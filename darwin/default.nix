@@ -9,7 +9,12 @@
 
   imports = [
     ./pkgs.nix
-  ];  
+  ];
+
+  programs.zsh.enable = true;
+  programs.zsh.promptInit = ''
+    eval "$(oh-my-posh init zsh --config ~/.poshthemes/your-theme.omp.json)"
+  '';
 
   homebrew = {
     enable = true;
