@@ -13,7 +13,7 @@
 
   programs.zsh = {
     enable = true;
-    enableAutosuggestions.enable = true;
+    enableAutosuggestions = true;
     #enableBashCompletion = true;
     promptInit = ''
     eval "$(oh-my-posh init zsh --config ~/github/nix-darwin/shared/oh-my-posh/themes/zen.toml)"
