@@ -38,12 +38,14 @@
 
   homebrew = {
     enable = true;
+    onActivation.extraFlags = [ "--verbose" ];
     casks = pkgs.callPackage ./cask.nix {};
     brews = pkgs.callPackage ./brew.nix {};
     masApps = import ./mas.nix;
     #onActivation.cleanup = "uninstall";
     onActivation.upgrade = true;
     onActivation.autoUpdate = true;
+    onActivation.cleanup = "zap";
   };
 
 
