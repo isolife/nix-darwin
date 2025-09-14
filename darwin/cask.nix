@@ -8,4 +8,5 @@ _:
   "visual-studio-code"
   "logi-options+"
   "mos"
+  "tailscale-app"
 ]
