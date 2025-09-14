@@ -18,33 +18,30 @@
 
   programs.zsh = {
     enable = true;
+    enableAutosuggestions = true;
     promptInit = ''
     eval "$(oh-my-posh init zsh --config ~/github/nix-darwin/shared/oh-my-posh/themes/zen.toml)"
   '';
-    shellAliases = {
-    #aliasname = "actual command with args";
-    # Safer rm, cp, mv with interactive prompts
-    rm = "rm -i";
-    cp = "cp -i";
-    mv = "mv -i";
-
+  interactiveShellInit = ''
+    # Safer rm and cp
+    alias rm="rm -i"
+    alias cp="cp -i"
+    alias mv="mv -i"
     # Quick ls shortcuts
-    ll = "ls -lah";
-    la = "ls -A";
-    l = "ls -CF";
-
+    alias ll="ls -lah"
+    alias la="ls -A"
+    alias l="ls -CF"
     # Git shortcuts
-    gs = "git status";
-    ga = "git add .";
-    gc = "git commit -m";
-    gp = "git push";
-    gl = "git pull";
-
+    alias gs="git status"
+    alias ga="git add ."
+    alias gc="git commit -m"
+    alias gp="git push"
+    alias gl="git pull"
     # Navigation shortcuts
-    ".." = "cd ..";
-    "..." = "cd ../..";
-    "...." = "cd ../../..";
-    };
+    alias ..="cd .."
+    alias ...="cd ../.."
+    alias ....="cd ../../.."
+  '';
   };
 
   homebrew = {
