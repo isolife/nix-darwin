@@ -2,4 +2,5 @@ _:
 
 [
   "ghostscript"
+  "tailscale"
 ]
