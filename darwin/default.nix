@@ -11,10 +11,42 @@
     ./pkgs.nix
   ];
 
-  programs.zsh.enable = true;
-  programs.zsh.promptInit = ''
+  # programs.zsh.enable = true;
+  # programs.zsh.promptInit = ''
+  #   eval "$(oh-my-posh init zsh --config ~/github/nix-darwin/shared/oh-my-posh/themes/zen.toml)"
+  # '';
+
+  programs.zsh = {
+    enable = true;
+    promptInit = ''
     eval "$(oh-my-posh init zsh --config ~/github/nix-darwin/shared/oh-my-posh/themes/zen.toml)"
   '';
+
+    shellAliases = {
+    #aliasname = "actual command with args";
+    # Safer rm, cp, mv with interactive prompts
+    rm = "rm -i";
+    cp = "cp -i";
+    mv = "mv -i";
+
+    # Quick ls shortcuts
+    ll = "ls -lah";
+    la = "ls -A";
+    l = "ls -CF";
+
+    # Git shortcuts
+    gs = "git status";
+    ga = "git add .";
+    gc = "git commit -m";
+    gp = "git push";
+    gl = "git pull";
+
+    # Navigation shortcuts
+    ".." = "cd ..";
+    "..." = "cd ../..";
+    "...." = "cd ../../..";
+    };
+  };
 
   homebrew = {
     enable = true;
