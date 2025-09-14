@@ -13,7 +13,7 @@
 
   programs.zsh.enable = true;
   programs.zsh.promptInit = ''
-    eval "$(oh-my-posh init zsh --config ~/.poshthemes/your-theme.omp.json)"
+    eval "$(oh-my-posh init zsh --config ~/github/nix-darwin/shared/oh-my-posh/themes/zen.toml)"
   '';
 
   homebrew = {
