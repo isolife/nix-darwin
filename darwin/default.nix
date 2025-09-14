@@ -21,7 +21,6 @@
     promptInit = ''
     eval "$(oh-my-posh init zsh --config ~/github/nix-darwin/shared/oh-my-posh/themes/zen.toml)"
   '';
-
     shellAliases = {
     #aliasname = "actual command with args";
     # Safer rm, cp, mv with interactive prompts
