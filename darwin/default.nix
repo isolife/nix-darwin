@@ -13,26 +13,23 @@
 
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    #enableAutosuggestions = true;
+    enableBashCompletion = true;
     promptInit = ''
     eval "$(oh-my-posh init zsh --config ~/github/nix-darwin/shared/oh-my-posh/themes/zen.toml)"
   '';
   interactiveShellInit = ''
-    # Safer rm and cp
     alias rm="rm -i"
     alias cp="cp -i"
     alias mv="mv -i"
-    # Quick ls shortcuts
     alias ll="ls -lah"
     alias la="ls -A"
     alias l="ls -CF"
-    # Git shortcuts
     alias gs="git status"
     alias ga="git add ."
     alias gc="git commit -m"
     alias gp="git push"
     alias gl="git pull"
-    # Navigation shortcuts
     alias ..="cd .."
     alias ...="cd ../.."
     alias ....="cd ../../.."
