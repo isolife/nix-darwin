@@ -71,6 +71,7 @@
   system = {
     primaryUser = systemSettings.username;
     stateVersion = 6; # See the note about this option in the README
+    startup.chime = false;  # disable startup chime
 
     defaults = {
       menuExtraClock.Show24Hour = true;  # show 24 hour clock
