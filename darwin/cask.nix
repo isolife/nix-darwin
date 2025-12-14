@@ -9,4 +9,5 @@ _:
   "logi-options+"
   "mos"
   "tailscale-app"
+  "brave-browser"
 ]
