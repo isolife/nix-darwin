@@ -5,5 +5,5 @@
   "1Password for Safari" = 1569813296;
   #"Dark Reader for Safari" = 1438243180;
   "Noir Dark Mode for Safari" = 1592917505;
-  "AdGuard Mini" = 1440147259;
+  #"AdGuard Mini" = 1440147259;
 }
