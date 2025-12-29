@@ -10,4 +10,5 @@ _:
   "mos"
   "tailscale-app"
   "brave-browser"
+  "balenaetcher"
 ]
