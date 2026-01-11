@@ -11,4 +11,5 @@ _:
   "tailscale-app"
   "brave-browser"
   "balenaetcher"
+  "syncthing-app"
 ]
